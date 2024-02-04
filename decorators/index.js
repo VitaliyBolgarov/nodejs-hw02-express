@@ -1,4 +1,4 @@
 const validateData = require("./validateData");
-const decorateConrtoler = require("./decorateControler");
+const decorateControler = require("./decorateControler");
 
-module.exports = { validateData, decorateConrtoler };
+module.exports = { validateData, decorateControler };

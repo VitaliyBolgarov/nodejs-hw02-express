@@ -1,4 +1,4 @@
-const decorateConrtoler = (func) => {
+const decorateControler = (func) => {
     const foo = async (req, res, next) => {
         try {
             await func(req, res, next);
@@ -9,4 +9,4 @@ const decorateConrtoler = (func) => {
     return foo;
 };
 
-module.exports = decorateConrtoler;
+module.exports = decorateControler;
