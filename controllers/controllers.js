@@ -5,7 +5,7 @@ const {
     addContact,
     updateContact,
 } = require("../models");
-const HttpError = require("../helpers");
+const { HttpError } = require("../helpers");
 const { decorateControler } = require("../decorators");
 
 const getAll = async (req, res, next) => {

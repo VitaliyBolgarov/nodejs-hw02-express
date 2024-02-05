@@ -1,3 +1,3 @@
-const isBodyEmpty = require("./validateBody");
+const validateBody = require("./validateBody");
 
-module.exports = isBodyEmpty;
+module.exports = validateBody;

@@ -7,7 +7,7 @@ const {
     removeById,
     updateById,
 } = require("../../controllers");
-const isBodyEmpty = require("../../midlewares");
+const {validateBody} = require("../../midlewares");
 const { validateData } = require("../../decorators");
 const schema = require("../../schemas");
 
@@ -17,10 +17,10 @@ router.get("/", getAll);
 
 router.get("/:contactId", getByID);
 
-router.post("/", isBodyEmpty, validateData(schema), add);
+router.post("/", validateBody, validateData(schema), add);
 
 router.delete("/:contactId", removeById);
 
-router.put("/:contactId", isBodyEmpty, validateData(schema), updateById);
+router.put("/:contactId", validateBody, validateData(schema), updateById);
 
 module.exports = router;
