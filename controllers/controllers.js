@@ -5,8 +5,8 @@ const {
     addContact,
     updateContact,
 } = require("../models");
-const { HttpError } = require("../helpers");
-const { decorateControler } = require("../decorators");
+const HttpError = require("../helpers");
+const { decorateConrtoler } = require("../decorators");
 
 const getAll = async (req, res, next) => {
     const result = await listContacts();
@@ -47,9 +47,9 @@ const updateById = async (req, res, next) => {
 };
 
 module.exports = {
-    getAll: decorateControler(getAll),
-    getByID: decorateControler(getByID),
-    add: decorateControler(add),
-    removeById: decorateControler(removeById),
-    updateById: decorateControler(updateById),
+    getAll: decorateConrtoler(getAll),
+    getByID: decorateConrtoler(getByID),
+    add: decorateConrtoler(add),
+    removeById: decorateConrtoler(removeById),
+    updateById: decorateConrtoler(updateById),
 };
